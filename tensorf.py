@@ -5,7 +5,7 @@ number_of_layers = input('enter the number of layers(excluding the output layer)
 num_neurons = []
 for i in range(num_of_layers):
 	num_neurons.append(500)
-num_neurons.append(500)
+num_neurons.append(10)
 hidden_layer = []
 batch_size = 100
 for i in range(len(num_neurons)):
