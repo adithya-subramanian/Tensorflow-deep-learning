@@ -40,7 +40,7 @@ with tf.Session() as sess:
 	for epoch in range(min_epochs):
 		epoch_loss = 0
 		for i in range(int(mnist.train.num_examples/batch_size)):
-			x,y = mnist.train.next_batch(batch_size)
+			epoch_x,epoch_y = mnist.train.next_batch(batch_size)
 			i,c = sess.run([optimizer,cost],feed_dict = {x:epoch_x,y:epoch_y})
 			epoch_loss = epoch_loss + c
 		print epoch
